@@ -1,0 +1,62 @@
+body {
+	background-color: #EDEDED;
+}
+
+.main {
+	position: fixed; /* //固定在顶部  */
+	left: 10px; /* //离左的距离为0  */
+	top: 10px; /* //离顶部距离为0  */
+	bottom: 10px;
+	right: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #fff;
+	color: #111;
+}
+
+.left {
+	position: fixed; /* //固定在顶部  */
+	left: 200px; /* //离左的距离为0  */
+	top: 200px; /* //离顶部距离为0  */
+	bottom: 200px;
+	right: 775px;
+	border-radius: 10px;
+	background-image: url('../images/1.jpg');
+}
+
+.right {
+	position: fixed; /* //固定在顶部  */
+	left: 775px; /* //离左的距离为0  */
+	top: 200px; /* //离顶部距离为0  */
+	bottom: 200px;
+	right: 200px;
+	border-radius: 10px;
+	border: 1px solid #111;
+	background-image: url('../images/1.jpg');
+}
+
+.main form {
+	margin-top: 80px;
+	margin-left: 50px;
+	margin-bottom: 80px;
+	margin-right: 50px;
+	height: 50%;
+	background-color: #fff;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.user_pwd {
+	text-align: center;
+}
+
+.login_btn {
+	text-align: center;
+}
+
+.login {
+	text-align: center;
+	width: 100px;
+}
