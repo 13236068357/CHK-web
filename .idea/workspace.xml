@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499b0aa9-8110-4460-8063-bdedc6f8d98d" name="Default Changelist" comment="">
+    <list default="true" id="499b0aa9-8110-4460-8063-bdedc6f8d98d" name="Default Changelist" comment="逐步替换JSP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +37,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -276,12 +277,31 @@
       <updated>1585380773232</updated>
       <workItem from="1585380777623" duration="12810000" />
       <workItem from="1585396337661" duration="1793000" />
-      <workItem from="1585398987851" duration="2827000" />
+      <workItem from="1585398987851" duration="3677000" />
     </task>
+    <task id="LOCAL-00001" summary="逐步替换JSP">
+      <created>1585401870670</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585401870670</updated>
+    </task>
+    <task id="LOCAL-00002" summary="逐步替换JSP">
+      <created>1585401881343</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585401881343</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="逐步替换JSP" />
+    <option name="LAST_COMMIT_MESSAGE" value="逐步替换JSP" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="186" key="#Project_Structure" timestamp="1585391645922">
@@ -304,10 +324,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="600" y="173" key="#toString()_Generation_Settings/0.0.1920.1050@0.0.1920.1050" timestamp="1585387971686" />
-    <state x="569" y="106" key="CommitChangelistDialog2" timestamp="1585401869753">
+    <state x="569" y="106" key="CommitChangelistDialog2" timestamp="1585401941999">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="569" y="106" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585401869753" />
+    <state x="569" y="106" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585401941999" />
+    <state x="226" y="72" key="DiffContextDialog" timestamp="1585401940501">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="226" y="72" key="DiffContextDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585401940501" />
     <state x="634" y="268" key="FileChooserDialogImpl" timestamp="1585395900174">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -316,22 +340,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="773" y="422" key="Github.CreateGistDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585394614187" />
-    <state width="636" height="199" key="GridCell.Tab.0.bottom" timestamp="1585400371607">
+    <state width="1293" height="199" key="GridCell.Tab.0.bottom" timestamp="1585401913202">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="636" height="199" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1585400371607" />
-    <state width="636" height="199" key="GridCell.Tab.0.center" timestamp="1585400371607">
+    <state width="1293" height="199" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1585401913202" />
+    <state width="1293" height="199" key="GridCell.Tab.0.center" timestamp="1585401913202">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="636" height="199" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1585400371607" />
-    <state width="636" height="199" key="GridCell.Tab.0.left" timestamp="1585400371606">
+    <state width="1293" height="199" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1585401913202" />
+    <state width="1293" height="199" key="GridCell.Tab.0.left" timestamp="1585401913202">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="636" height="199" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1585400371606" />
-    <state width="636" height="199" key="GridCell.Tab.0.right" timestamp="1585400371607">
+    <state width="1293" height="199" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1585401913202" />
+    <state width="1293" height="199" key="GridCell.Tab.0.right" timestamp="1585401913202">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="636" height="199" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1585400371607" />
+    <state width="1293" height="199" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1585401913202" />
     <state width="1293" height="132" key="GridCell.Tab.1.bottom" timestamp="1585398951465">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -372,6 +396,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="588" y="192" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1585399932392" />
+    <state x="754" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585401885082">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="754" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1585401885082" />
     <state x="334" y="140" key="new project wizard" timestamp="1585397034776">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
