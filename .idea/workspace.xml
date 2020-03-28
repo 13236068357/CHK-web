@@ -55,6 +55,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/libs" />
@@ -303,6 +304,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="600" y="173" key="#toString()_Generation_Settings/0.0.1920.1050@0.0.1920.1050" timestamp="1585387971686" />
+    <state x="569" y="106" key="CommitChangelistDialog2" timestamp="1585401869753">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="569" y="106" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585401869753" />
     <state x="634" y="268" key="FileChooserDialogImpl" timestamp="1585395900174">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
