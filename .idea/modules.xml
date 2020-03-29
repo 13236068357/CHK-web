@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CommHouseKeeping-web.iml" filepath="$PROJECT_DIR$/CommHouseKeeping-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CHK-web.iml" filepath="$PROJECT_DIR$/CHK-web.iml" />
     </modules>
   </component>
 </project>
