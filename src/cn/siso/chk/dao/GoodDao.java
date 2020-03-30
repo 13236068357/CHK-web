@@ -6,5 +6,9 @@ import java.util.List;
 
 public interface GoodDao {
 
-    public List<Good> findAll();
+    List<Good> findAll();
+
+    void addGood(Good good);
+
+    void deleteGood(int id);
 }
