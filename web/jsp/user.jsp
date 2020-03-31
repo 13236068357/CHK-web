@@ -11,7 +11,7 @@
 <title>订单管理</title>
 <script src="../javaScript/animation.js" charset="utf-8"></script>
 <style>
-.user {
+.admin {
 	width: 33%;
 	height: 200px;
 	margin: 25px 0 25px 25px;
@@ -64,7 +64,7 @@
 				<th>操作</th>
 			</tr>
 			<%
-				sql = "select * from user";
+				sql = "select * from admin";
 				ps = con.prepareStatement(sql);
 				rs = ps.executeQuery();
 				while (rs.next()) {

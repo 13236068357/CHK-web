@@ -39,7 +39,7 @@
                 <td>${good.info}</td>
                 <td>
                     <button style="background-color: green;"
-                            onclick="window.location.href='${pageContext.request.contextPath}/updateListServlet?id=${good.id}'">
+                            onclick="window.location.href='${pageContext.request.contextPath}/updateGoodListServlet?id=${good.id}'">
                         编辑
                     </button>
                     <button style="background-color: red;"

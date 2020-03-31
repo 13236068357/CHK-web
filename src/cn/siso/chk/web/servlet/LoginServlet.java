@@ -1,6 +1,6 @@
 package cn.siso.chk.web.servlet;
 
-import cn.siso.chk.domain.User;
+import cn.siso.chk.domain.Admin;
 import cn.siso.chk.service.UserService;
 import cn.siso.chk.service.impl.UserServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
@@ -38,10 +38,10 @@ public class LoginServlet extends HttpServlet {
         //获取用户全部输入
         Map<String, String[]> map = req.getParameterMap();
         //创建User对象
-        User loginUser = new User();
+        Admin loginAdmin = new Admin();
         try {
             //封装User对象
-            BeanUtils.populate(loginUser, map);
+            BeanUtils.populate(loginAdmin, map);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
         }
         //调用登录方法
         UserService userService = new UserServiceImpl();
-        User login = userService.login(loginUser);
+        Admin login = userService.login(loginAdmin);
         if (login != null) {
             //将用户存入session
             session.setAttribute("user", login);

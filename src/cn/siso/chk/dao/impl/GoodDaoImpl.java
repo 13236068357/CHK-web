@@ -2,12 +2,10 @@ package cn.siso.chk.dao.impl;
 
 import cn.siso.chk.dao.GoodDao;
 import cn.siso.chk.domain.Good;
-import cn.siso.chk.domain.User;
 import cn.siso.chk.util.JDBCUtil;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 

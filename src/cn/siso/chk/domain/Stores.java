@@ -1,10 +1,12 @@
 package cn.siso.chk.domain;
 
-public class User {
+public class Stores {
+
     private Integer id;
-    private String username;
-    private String belong;
+    private String name;
+    private String info;
     private String address;
+    private Integer phone;
 
     public Integer getId() {
         return id;
@@ -14,20 +16,20 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getBelong() {
-        return belong;
+    public String getInfo() {
+        return info;
     }
 
-    public void setBelong(String belong) {
-        this.belong = belong;
+    public void setInfo(String info) {
+        this.info = info;
     }
 
     public String getAddress() {
@@ -46,5 +48,13 @@ public class User {
         this.phone = phone;
     }
 
-    private Integer phone;
+    public String getBelong() {
+        return belong;
+    }
+
+    public void setBelong(String belong) {
+        this.belong = belong;
+    }
+
+    private String belong;
 }

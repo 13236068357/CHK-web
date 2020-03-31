@@ -1,8 +1,8 @@
 package cn.siso.chk.service;
 
-import cn.siso.chk.domain.User;
+import cn.siso.chk.domain.Admin;
 
 public interface UserService {
 
-    User login(User loginUser);
+    Admin login(Admin loginAdmin);
 }

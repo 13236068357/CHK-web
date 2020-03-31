@@ -75,7 +75,7 @@
 				%>
 				<%
 					int userid = rs.getInt("user_id");
-						sql = "select * from user where id=?";
+						sql = "select * from admin where id=?";
 						ps = con.prepareStatement(sql);
 						ps.setObject(1, userid);
 						ResultSet rsU = ps.executeQuery();

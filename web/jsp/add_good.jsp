@@ -187,7 +187,7 @@
                 <td><input type="text" name="info"/></td>
             </tr>
             <tr>
-                <td><input type="hidden" name="user_id" value="${user.id}"/></td>
+                <td><input type="hidden" name="user_id" value="${admin.id}"/></td>
             </tr>
         </table>
     </div>

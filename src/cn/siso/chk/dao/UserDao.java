@@ -1,8 +1,8 @@
 package cn.siso.chk.dao;
 
-import cn.siso.chk.domain.User;
+import cn.siso.chk.domain.Admin;
 
 public interface UserDao {
 
-    User login(User loginUser);
+    Admin login(Admin loginAdmin);
 }
