@@ -7,7 +7,9 @@ import cn.siso.chk.util.JDBCUtil;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.Map;
 
 public class GoodDaoImpl implements GoodDao {
     JdbcTemplate jdbcTemplate = new JdbcTemplate(JDBCUtil.getDataSource());
@@ -32,8 +34,20 @@ public class GoodDaoImpl implements GoodDao {
      */
     @Override
     public void addGood(Good good) {
-        String sql = "insert into goods values (null,?,?,?,?,?)";
-        jdbcTemplate.update(sql, good.getName(), good.getImages(), good.getPrice(), good.getSort(), good.getInfo());
+        String sql = "insert into goods values (null,?,?,?,?,?,?)";
+        jdbcTemplate.update(sql, good.getName(), good.getImages(), good.getPrice(), good.getSort(), good.getInfo(), good.getUser_id());
+    }
+
+
+    @Override
+    public void updateGood(Good good) {
+
+    }
+
+    public Map<String, Object> selectId(int id) {
+        String sql = "select * from goods where id = ?";
+        Map<String, Object> good1 = jdbcTemplate.queryForMap(sql, id);
+        return good1;
     }
 
     @Override

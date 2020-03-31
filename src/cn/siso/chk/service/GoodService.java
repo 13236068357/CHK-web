@@ -3,6 +3,7 @@ package cn.siso.chk.service;
 import cn.siso.chk.domain.Good;
 
 import java.util.List;
+import java.util.Map;
 
 public interface GoodService {
 
@@ -10,5 +11,9 @@ public interface GoodService {
 
     void addGood(Good good);
 
+    void updateGood(Good good);
+
     void deleteGood(String id);
+
+    Map<String, Object> selectId(String id);
 }

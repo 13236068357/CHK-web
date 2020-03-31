@@ -3,6 +3,7 @@ package cn.siso.chk.dao;
 import cn.siso.chk.domain.Good;
 
 import java.util.List;
+import java.util.Map;
 
 public interface GoodDao {
 
@@ -10,5 +11,10 @@ public interface GoodDao {
 
     void addGood(Good good);
 
+    void updateGood(Good good);
+
     void deleteGood(int id);
+
+    Map<String, Object> selectId(int id);
+
 }

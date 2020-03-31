@@ -51,7 +51,7 @@
 </head>
 <body>
 <div class="menu">
-    <div>某某用户</div>
+    <div>${user.username}</div>
     <hr>
     <div class="caidan">
         <div>分销管理</div>
@@ -59,22 +59,22 @@
             <img src="images/goods.png"/> <a href="${pageContext.request.contextPath}/goodListServlet">商品管理</a>
         </div>
         <div>
-            <img src="images/order.png"/> <a href="order.jsp">订单管理</a>
+            <img src="images/order.png"/> <a href="${pageContext.request.contextPath}/orderListServlet">订单管理</a>
         </div>
     </div>
     <div class="caidan">
         <div>信息管理</div>
         <div>
-            <img src="images/comm.png"/> <a href="community.jsp">社区管理</a>
+            <img src="images/comm.png"/> <a href="${pageContext.request.contextPath}/communityListServlet">社区管理</a>
         </div>
         <div>
-            <img src="images/store.png"/> <a href="stores.jsp">商家管理</a>
+            <img src="images/store.png"/> <a href="${pageContext.request.contextPath}/storesListServlet">商家管理</a>
         </div>
         <div>
-            <img src="images/user.png"/> <a href="user.jsp">用户管理</a>
+            <img src="images/user.png"/> <a href="${pageContext.request.contextPath}/userListServlet">用户管理</a>
         </div>
         <div>
-            <img src="images/assess.png"/> <a href="assess.jsp">评价管理</a>
+            <img src="images/assess.png"/> <a href="${pageContext.request.contextPath}/assessListServlet">评价管理</a>
         </div>
     </div>
 </div>

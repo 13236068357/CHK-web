@@ -8,10 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="jsp/menu.jsp"/>
 <html>
+<link href="css/public.css" type="text/css" rel="stylesheet"/>
 <head>
     <title>Title</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/goodListServlet">测试</a>
+
 </body>
 </html>

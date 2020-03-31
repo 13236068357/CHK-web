@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +20,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 950px;
+            height: 800px;
         }
 
         .overall {
@@ -38,6 +39,7 @@
         table {
             width: 40%;
             height: auto;
+            margin-top: 50px;
         }
 
         table input {
@@ -46,76 +48,86 @@
         }
 
         .image {
-            margin: 100px;
-            width: 75%;
-            border: 1px solid #111111;
+            margin: 50px 100px 100px 100px;
+            width: 100%;
+            height: 500px;
+            border: 1px dotted #111111;
+        }
+
+        .upImg {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
 
         .inputLabel {
-            position: fixed;
-            top: 300px;
-            left: 300px;
-            width: 50px;
+            margin-top: 30px;
+            margin-left: 25px;
         }
 
+        .img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover; /* 等比缩放 */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            border: 1px dotted #111111;
+            margin-left: 25px;
+            margin-top: 30px;
+        }
+
+        .r-s-button {
+            display: flex;
+            width: 300px;
+        }
+
+        .r-s-button button {
+            width: 100px;
+            height: 50px;
+            margin-left: 20px;
+            background-color: aquamarine;
+            font-size: 30px;
+            border-radius: 5px;
+        }
     </style>
     <script>
-        function check() {
-            if (document.getElementById("username").value == '') {
-                alert("用户名不能为空");
-                return false;
-            }
-            if (document.getElementById("password").value == '') {
-                alert("密码不能为空");
-                return false;
-            }
-            return true;
-        }
-
-        var imgUrl = [];// 将图片暂时保存在数组
+        let imgUrl = [];// 将图片暂时保存在数组
 
         function change() {
-            var uploadUrl = getFileUrl('inputFile');//获取文件
+            let uploadUrl = getFileUrl('inputFile');//获取文件
             imgUrl.push(uploadUrl);//将元素添加进数组
-            document.getElementById("allImgUrl").value = imgUrl;
-            var previewlImg = document.getElementById("previewlImg");//绑定div
+            document.getElementById("images").value = imgUrl;
+            let upImg = document.getElementById("upImg");//绑定div
 
             //创建标签
-            var outDiv = document.createElement("div");
-            var container = document.createElement("div");
-            var img = document.createElement("img");
-            var deleteImg = document.createElement("img");
+            let container = document.createElement("div");
+            let img = document.createElement("img");
 
             //设置样式、属性
             img.src = uploadUrl;
-            img.className = "upImg";
-            img.name = "allImgUrl";
-            deleteImg.id = imgUrl.indexOf(uploadUrl);
-            deleteImg.className = "delete";
-            deleteImg.src = "../images/delete.png";
+            img.className = "img";
             container.className = "container";
-            outDiv.id = imgUrl.indexOf(uploadUrl);//获取当前元素在数组中的下标
-            outDiv.className = "outDiv";
+            container.id = uploadUrl.indexOf(imgUrl);
 
             //添加标签
-            container.appendChild(deleteImg);
-            outDiv.appendChild(img);
-            outDiv.appendChild(container);
-            previewlImg.append(outDiv);
+            container.append(img);
+            upImg.append(container);
 
             //给删除图标添加监听事件
-            var deletebtn = document.getElementsByClassName("delete");
-            for (var i = 0; i < deletebtn.length; i++) {
-                deletebtn[i].onclick = function (e) {
-                    // console.log(e.target.id);
-                    imgUrl.splice(e.target.id, 1);
-                    document.getElementById("allImgUrl").value = imgUrl;
-                    var outDiv = document.getElementById(e.target.id);
-                    var parentObj = outDiv.parentNode;
-                    parentObj.removeChild(outDiv);
-
-                }
-            }
+            // let deleteBtn = document.getElementsByClassName("delete");
+            // for (var i = 0; i < deletebtn.length; i++) {
+            //     deleteBtn[i].onclick = function (e) {
+            //         imgUrl.splice(e.target.id, 1);
+            //         document.getElementById("images").value = imgUrl;
+            //         var container = document.getElementById(e.target.id);
+            //         var parentObj = container.parentNode;
+            //         parentObj.removeChild(container);
+            //
+            //     }
+            // }
         }
 
         //判断浏览器类型
@@ -134,15 +146,14 @@
     </script>
 </head>
 <body>
-<form action="" method="post" enctype="multipart/form-data">
+<h3 align="center">添加商品</h3>
+<form action="${pageContext.request.contextPath}/addGoodServlet" method="post">
     <div class="overall">
         <div class="leftImage">
             <div class="image">
-                <div id="previewlImg" class="previewImg">
-                    <input id="inputFile" class="inputLabel" onchange="change('preview');" type="file"
-                           style="opacity: 0;">
+                <div id="upImg" class="upImg">
                     <label class="inputLabel" for="inputFile">
-                        <img style="width: 100px;" src="../images/addImg.png"/></label>
+                        <img style="width: 200px;" src="../images/addImg.png"/></label>
                 </div>
             </div>
         </div>
@@ -152,7 +163,8 @@
                 <td>
                     <b>名称:</b>
                 </td>
-                <td><input type="text" name="name"/></td>
+                <td><input id="name" type="text" name="name"/></td>
+                <td><input id="images" name="images" type="hidden"/></td>
             </tr>
             <tr>
                 <td><b>价格:</b></td>
@@ -160,7 +172,8 @@
             </tr>
             <tr>
                 <td><b>类别:</b></td>
-                <td><select id="sort" name="sort">
+                <td><select id="sort" name="sort"
+                            style="font-size: 30px;width: 369px;border: 2px solid #111111;border-radius: 5px;">
                     <option>搬家</option>
                     <option>保洁</option>
                     <option>保姆</option>
@@ -173,11 +186,17 @@
                 <td><b>信息：</b></td>
                 <td><input type="text" name="info"/></td>
             </tr>
+            <tr>
+                <td><input type="hidden" name="user_id" value="${user.id}"/></td>
+            </tr>
+        </table>
     </div>
-    </table>
+    <div class="r-s-button">
+        <button type="reset" value="重置">重置</button>
+        <button type="submit" value="添加">添加</button>
     </div>
-    <button type="reset" value="重置"/>
-    <button type="submit" value="添加"/>
 </form>
+<input id="inputFile" name="inputFile" class="inputFile" onchange="change();" type="file"
+       style="opacity: 0;">
 </body>
 </html>

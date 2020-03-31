@@ -1,7 +1,6 @@
 package cn.siso.chk.web.servlet;
 
 import cn.siso.chk.dao.GoodDao;
-import cn.siso.chk.dao.impl.GoodDaoImpl;
 import cn.siso.chk.domain.Good;
 import cn.siso.chk.service.GoodService;
 import cn.siso.chk.service.impl.GoodServiceImpl;
@@ -16,12 +15,11 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
-@WebServlet("/addGoodServlet")
-public class AddGoodServlet extends HttpServlet {
+@WebServlet("/updateGoodServlet")
+public class UpdateGoodServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         req.setCharacterEncoding("utf-8");
         Map<String, String[]> map = req.getParameterMap();
         Good good = new Good();
@@ -32,8 +30,9 @@ public class AddGoodServlet extends HttpServlet {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
+
         GoodService goodService = new GoodServiceImpl();
-        goodService.addGood(good);
+        goodService.updateGood(good);
         resp.sendRedirect(req.getContextPath() + "/goodListServlet");
     }
 

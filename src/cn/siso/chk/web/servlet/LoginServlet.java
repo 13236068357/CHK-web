@@ -1,7 +1,5 @@
 package cn.siso.chk.web.servlet;
 
-import cn.siso.chk.dao.UserDao;
-import cn.siso.chk.dao.impl.UserDaoImpl;
 import cn.siso.chk.domain.User;
 import cn.siso.chk.service.UserService;
 import cn.siso.chk.service.impl.UserServiceImpl;
@@ -24,28 +22,42 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.setCharacterEncoding("utf-8");
-
-        Map<String, String[]> map = req.getParameterMap();
+        //获取用户输入验证码
+        String verifyCode = req.getParameter("verifyCode");
+        //获取servlet生成验证码
         HttpSession session = req.getSession();
-
+        String check_code = String.valueOf(session.getAttribute("CHECK_CODE"));
+        session.removeAttribute("CHECK_CODE");
+        //如果不正确返回登录
+        if (!check_code.equalsIgnoreCase(verifyCode)) {
+            req.setAttribute("msg", "验证码错误！");
+            //跳转回登录页面
+            req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
+            return;
+        }
+        //获取用户全部输入
+        Map<String, String[]> map = req.getParameterMap();
+        //创建User对象
         User loginUser = new User();
         try {
+            //封装User对象
             BeanUtils.populate(loginUser, map);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
-
-        UserDao userDao = new UserDaoImpl();
+        //调用登录方法
         UserService userService = new UserServiceImpl();
         User login = userService.login(loginUser);
         if (login != null) {
+            //将用户存入session
             session.setAttribute("user", login);
             resp.sendRedirect(req.getContextPath() + "/index.jsp");
         } else {
+            System.out.println("222");
             req.setAttribute("msg", "用户名或密码错误！");
-            req.getRequestDispatcher(req.getContextPath() + "/login.jsp").forward(req, resp);
+            req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
         }
     }
 
