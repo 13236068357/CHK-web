@@ -14,7 +14,11 @@ public class CommunityDaoImpl implements CommunityDao {
 
     @Override
     public List<Community> findAll() {
+<<<<<<< HEAD
         String sql = "select * from communities";
+=======
+        String sql = "select * from community";
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
         List<Community> communities = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Community>(Community.class));
         return communities;
     }

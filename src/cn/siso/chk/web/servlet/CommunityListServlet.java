@@ -19,8 +19,12 @@ public class CommunityListServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         CommunityService communityService = new CommunityServiceImpl();
         List<Community> communities = communityService.findAll();
+<<<<<<< HEAD
         req.setAttribute("communities", communities);
         req.getRequestDispatcher("/jsp/communities.jsp").forward(req, resp);
+=======
+        req.setAttribute("communities",communities);
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
     }
 
     @Override

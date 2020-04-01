@@ -1,8 +1,12 @@
 package cn.siso.chk.web.servlet;
 
 import cn.siso.chk.domain.Admin;
+<<<<<<< HEAD
 import cn.siso.chk.service.AdminService;
 import cn.siso.chk.service.impl.AdminServiceImpl;
+=======
+import cn.siso.chk.service.UserService;
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
 import cn.siso.chk.service.impl.UserServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -33,7 +37,11 @@ public class LoginServlet extends HttpServlet {
         if (!check_code.equalsIgnoreCase(verifyCode)) {
             req.setAttribute("msg", "验证码错误！");
             //跳转回登录页面
+<<<<<<< HEAD
             req.getRequestDispatcher("jsp/login.jsp").forward(req, resp);
+=======
+            req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
             return;
         }
         //获取用户全部输入
@@ -49,6 +57,7 @@ public class LoginServlet extends HttpServlet {
             e.printStackTrace();
         }
         //调用登录方法
+<<<<<<< HEAD
         AdminService adminService = new AdminServiceImpl();
         Admin login = adminService.login(loginAdmin);
         if (login != null) {
@@ -59,6 +68,18 @@ public class LoginServlet extends HttpServlet {
             System.out.println("222");
             req.setAttribute("msg", "用户名或密码错误！");
             req.getRequestDispatcher("jsp/login.jsp").forward(req, resp);
+=======
+        UserService userService = new UserServiceImpl();
+        Admin login = userService.login(loginAdmin);
+        if (login != null) {
+            //将用户存入session
+            session.setAttribute("user", login);
+            resp.sendRedirect(req.getContextPath() + "/index.jsp");
+        } else {
+            System.out.println("222");
+            req.setAttribute("msg", "用户名或密码错误！");
+            req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
         }
     }
 

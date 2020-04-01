@@ -148,7 +148,11 @@
 </head>
 <body>
 <h3 align="center">编辑商品</h3>
+<<<<<<< HEAD
 <form action="${pageContext.request.contextPath}/goodUpdateServlet" method="post">
+=======
+<form action="${pageContext.request.contextPath}/addGoodServlet" method="post">
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
     <div class="overall">
         <div class="leftImage">
             <div class="image">

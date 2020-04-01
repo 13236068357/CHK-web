@@ -39,11 +39,19 @@
                 <td>${good.info}</td>
                 <td>
                     <button style="background-color: green;"
+<<<<<<< HEAD
                             onclick="window.location.href='${pageContext.request.contextPath}/goodUpdateListServlet?id=${good.id}'">
                         编辑
                     </button>
                     <button style="background-color: red;"
                             onclick="window.location.href='${pageContext.request.contextPath}/goodDeleteServlet?id=${good.id}'">
+=======
+                            onclick="window.location.href='${pageContext.request.contextPath}/updateGoodListServlet?id=${good.id}'">
+                        编辑
+                    </button>
+                    <button style="background-color: red;"
+                            onclick="window.location.href='${pageContext.request.contextPath}/deleteGoodServlet?id=${good.id}'">
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
                         删除
                     </button>
                 </td>

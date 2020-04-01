@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/hk-web.iml" filepath="$PROJECT_DIR$/hk-web.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/CHK-web.iml" filepath="$PROJECT_DIR$/CHK-web.iml" />
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
     </modules>
   </component>
 </project>
