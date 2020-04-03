@@ -82,7 +82,7 @@
         <h4 align="center">社区家政通管理系统</h4>
         <h5 align="center">登录</h5>
         <h5 align="center" style="color: red;">${msg}</h5>
-        <table>
+        <table style="border: 1px dotted #111111">
             <tr>
                 <td><b>用户名: </b></td>
                 <td><input id="username" name="username" type="text" value=""/> <br/></td>
@@ -98,8 +98,10 @@
                 <td><img id="changeCode" src="${pageContext.request.contextPath}/checkCodeServlet"></td>
             </tr>
         </table>
-        <button type="submit" onclick="return check()">登录</button>
-        <button type="submit" onclick="return check()">登录</button>
+        <div style="width:20%;display: flex;align-self:center;justify-content: space-around">
+            <button type="submit" onclick="return check()">登录</button>
+            <button type="submit" onclick="return check()">注册</button>
+        </div>
     </form>
 </div>
 </body>

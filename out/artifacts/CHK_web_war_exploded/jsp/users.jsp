@@ -35,6 +35,7 @@
             <th>编号</th>
             <th>用户名</th>
             <th>联系电话</th>
+            <th>社区</th>
             <th>地址</th>
         </tr>
         <c:forEach items="${users}" var="user" varStatus="s">
@@ -42,6 +43,7 @@
                 <td>${user.id}</td>
                 <td>${user.username}</td>
                 <td>${user.phone}</td>
+                <td>${user.belong}</td>
                 <td>${user.address}</td>
             </tr>
         </c:forEach>

@@ -12,10 +12,11 @@
 <body>
 <div class="head">
     <h4 align="center">社区管理</h4>
-    <button class="add" onclick="">新增社区</button>
+    <button class="add" onclick="window.location.href='jsp/community_add.jsp'">新增社区</button>
+    <button class="delete" onclick="window.location.href='${pageContext.request.contextPath}/jsp/.jsp'">删除选中</button>
 </div>
 <hr>
-<div class="excel" style="height: 95%; overflow: scroll;">
+<div class="excel" style="height: 75%; overflow: scroll;">
     <table>
         <tr>
             <th>编号</th>
@@ -32,11 +33,11 @@
                 <td>${community.phone}</td>
                 <td>
                     <button style="background-color: cornflowerblue;"
-                            onclick="window.location.href='${pageContext.request.contextPath}/?id=${community.id}'">
+                            onclick="window.location.href='${pageContext.request.contextPath}/communityUpdateListServlet?id=${community.id}'">
                         编辑
                     </button>
                     <button style="background-color: red;"
-                            onclick="window.location.href='${pageContext.request.contextPath}/?id=${community.id}'">
+                            onclick="window.location.href='${pageContext.request.contextPath}/communityDeletServlet?id=${community.id}'">
                         删除
                     </button>
                 </td>

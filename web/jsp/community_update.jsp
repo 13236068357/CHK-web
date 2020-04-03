@@ -114,18 +114,6 @@
         container.append(img);
         upImg.append(container);
 
-        //给删除图标添加监听事件
-        // let deleteBtn = document.getElementsByClassName("delete");
-        // for (var i = 0; i < deletebtn.length; i++) {
-        //     deleteBtn[i].onclick = function (e) {
-        //         imgUrl.splice(e.target.id, 1);
-        //         document.getElementById("images").value = imgUrl;
-        //         var container = document.getElementById(e.target.id);
-        //         var parentObj = container.parentNode;
-        //         parentObj.removeChild(container);
-        //
-        //     }
-        // }
     }
 
     //判断浏览器类型
@@ -144,11 +132,11 @@
 </script>
 <head>
     <meta charset="utf-8"/>
-    <title>编辑商品</title>
+    <title>编辑社区</title>
 </head>
 <body>
-<h3 align="center">编辑商品</h3>
-<form action="${pageContext.request.contextPath}/goodUpdateServlet" method="post">
+<h3 align="center">编辑社区</h3>
+<form action="${pageContext.request.contextPath}/communityUpdateServlet" method="post">
     <div class="overall">
         <div class="leftImage">
             <div class="image">
@@ -168,31 +156,16 @@
         <table>
             <tr>
                 <td><b>名称:</b></td>
-                <td><input id="name" type="text" name="name" placeholder="${good.name}"/></td>
+                <td><input id="name" type="text" name="name" placeholder="${community.name}"/></td>
                 <td><input id="images" name="images" type="hidden"/></td>
             </tr>
             <tr>
-                <td><b>价格:</b></td>
-                <td><input type="text" name="price" placeholder="${good.price}"/></td>
+                <td><b>地址:</b></td>
+                <td><input type="text" name="price" placeholder="${community.address}"/></td>
             </tr>
             <tr>
-                <td><b>类别:</b></td>
-                <td><select id="sort" name="sort"
-                            style="font-size: 30px;width: 369px;border: 2px solid #111111;border-radius: 5px;">
-                    <option>搬家</option>
-                    <option>保洁</option>
-                    <option>保姆</option>
-                    <option>家务</option>
-                    <option>维修</option>
-                </select>
-                </td>
-            </tr>
-            <tr>
-                <td><b>信息：</b></td>
-                <td><input type="text" name="info" placeholder="${good.info}"/></td>
-            </tr>
-            <tr>
-                <td><input type="hidden" name="user_id" value="${admin.id}"/></td>
+                <td><b>联系方式:</b></td>
+                <td><input type="text" name="price" placeholder="${community.phone}"/></td>
             </tr>
         </table>
     </div>

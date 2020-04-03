@@ -24,7 +24,7 @@ public class GoodUpdateListServlet extends HttpServlet {
         Map<String, Object> good = goodService.selectId(id);
         req.setAttribute("good", good);
         //转发
-        req.getRequestDispatcher("/jsp/update_good.jsp").forward(req, resp);
+        req.getRequestDispatcher("/jsp/good_update.jsp").forward(req, resp);
     }
 
     @Override

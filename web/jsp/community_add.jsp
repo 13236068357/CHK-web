@@ -10,8 +10,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <title>添加商品</title>
     <style>
 
         form {
@@ -116,19 +114,6 @@
             //添加标签
             container.append(img);
             upImg.append(container);
-
-            //给删除图标添加监听事件
-            let deleteBtn = document.getElementsByClassName("delete");
-            for (var i = 0; i < deletebtn.length; i++) {
-                deleteBtn[i].onclick = function (e) {
-                    imgUrl.splice(e.target.id, 1);
-                    document.getElementById("images").value = imgUrl;
-                    var container = document.getElementById(e.target.id);
-                    var parentObj = container.parentNode;
-                    parentObj.removeChild(container);
-
-                }
-            }
         }
 
         //判断浏览器类型
@@ -186,10 +171,12 @@
         }
 
     </script>
+    <meta charset="utf-8"/>
+    <title>添加社区</title>
 </head>
 <body>
-<h3 align="center">添加商品</h3>
-<form action="${pageContext.request.contextPath}/goodAddServlet?id=${admin.id}" method="post">
+<h3 align="center">添加社区</h3>
+<form action="${pageContext.request.contextPath}/communityAddServlet?id=${admin.id}" method="post">
     <div class="overall">
         <div class="leftImage">
             <div class="image">
@@ -207,39 +194,12 @@
                 <td><input id="images" name="images" type="hidden"/></td>
             </tr>
             <tr>
-                <td><b>价格:</b></td>
-                <td><input type="text" name="price"/></td>
+                <td><b>地址:</b></td>
+                <td><input type="text" name="address"/></td>
             </tr>
             <tr>
-                <td><b>类别:</b></td>
-                <td><select id="sort" name="sort"
-                            style="font-size: 30px;width: 369px;border: 2px solid #111111;border-radius: 5px;"
-                            onChange="selectChange(this)">
-                    <option>搬家</option>
-                    <option>保洁</option>
-                    <option>保姆</option>
-                    <option>家务</option>
-                    <option>维修</option>
-                </select>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><select id="sortChild" name="sortChild"
-                            style="font-size: 30px;width: 369px;border: 2px solid #111111;border-radius: 5px;">
-                    <option id="1">居民</option>
-                    <option id="2">长途</option>
-                    <option id="3">空调移机</option>
-                    <option id="4">设备</option>
-                </select>
-                </td>
-            </tr>
-            <tr>
-                <td><b>信息：</b></td>
-                <td><input type="text" name="info"/></td>
-            </tr>
-            <tr>
-                <td><input type="hidden" name="user_id" value="${admin.id}"/></td>
+                <td><b>phone:</b></td>
+                <td><input type="text" name="phone"/></td>
             </tr>
         </table>
     </div>

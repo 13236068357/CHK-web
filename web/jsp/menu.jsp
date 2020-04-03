@@ -51,7 +51,8 @@
 </head>
 <body>
 <div class="menu">
-    <div style=" padding-left: 20px;">${admin.username}</div>
+    <div style=" padding-left: 20px;"><h3>${admin.username}</h3>
+        <h4>欢迎您！</h4></div>
     <div class="caiDan">
         <div>
             <img src="${pageContext.request.contextPath}/images/index.png"/> <a

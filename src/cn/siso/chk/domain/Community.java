@@ -7,6 +7,7 @@ public class Community {
     private String images;
     private String address;
     private Integer phone;
+    private String username;
 
     public Integer getId() {
         return id;
@@ -56,5 +57,4 @@ public class Community {
         this.username = username;
     }
 
-    private String username;
 }

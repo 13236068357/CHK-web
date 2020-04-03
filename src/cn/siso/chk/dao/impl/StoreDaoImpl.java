@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
+import java.util.Map;
 
 public class StoreDaoImpl implements StoreDao {
 
@@ -17,5 +18,24 @@ public class StoreDaoImpl implements StoreDao {
         String sql = "select * from stores";
         List<Store> stores = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Store>(Store.class));
         return stores;
+    }
+
+    @Override
+    public void addStore(Store store) {
+        String sql = "insert into stores values(null,?,?,?,?,?,?)";
+        jdbcTemplate.update(sql, store.getName(), store.getImages(), store.getInfo(), store.getAddress(), store.getPhone(), store.getBelong());
+    }
+
+    @Override
+    public Map<String, Object> selectId(int id) {
+        String sql = "select * from stores where id = ?";
+        Map<String, Object> store = jdbcTemplate.queryForMap(sql, id);
+        return store;
+    }
+
+    @Override
+    public void deleteStore(int id) {
+        String sql = "delete from stores where id = ?";
+        jdbcTemplate.update(sql, id);
     }
 }

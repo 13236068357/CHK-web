@@ -7,16 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="${pageContext.request.contextPath}/css/public.css" type="text/css" rel="stylesheet"/>
-    <style>
-        .assess {
-            width: 33%;
-            height: 200px;
-            margin: 25px 0 25px 25px;
-            width: 33%;
-        }
-    </style>
     <title>订单管理</title>
-    <script src="../javaScript/animation.js" charset="utf-8"></script>
 </head>
 
 <body>

@@ -4,6 +4,7 @@ public class Store {
 
     private Integer id;
     private String name;
+    private String images;
     private String info;
     private String address;
     private Integer phone;
@@ -22,6 +23,14 @@ public class Store {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+        this.images = images;
     }
 
     public String getInfo() {
