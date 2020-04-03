@@ -2,7 +2,10 @@ package cn.siso.chk.web.servlet;
 
 import cn.siso.chk.dao.GoodDao;
 import cn.siso.chk.dao.impl.GoodDaoImpl;
+<<<<<<< HEAD
 import cn.siso.chk.domain.Admin;
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 import cn.siso.chk.domain.Good;
 import cn.siso.chk.service.GoodService;
 import cn.siso.chk.service.impl.GoodServiceImpl;
@@ -13,7 +16,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
@@ -34,9 +40,14 @@ public class GoodAddServlet extends HttpServlet {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
+<<<<<<< HEAD
         String id = req.getParameter("id");
         GoodService goodService = new GoodServiceImpl();
         goodService.addGood(good, id);
+=======
+        GoodService goodService = new GoodServiceImpl();
+        goodService.addGood(good);
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
         resp.sendRedirect(req.getContextPath() + "/goodListServlet");
     }
 

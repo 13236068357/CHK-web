@@ -4,11 +4,17 @@ public class Assess {
 
     private Integer id;
     private Integer goodId;
+<<<<<<< HEAD
     private String goodName;
     private Integer userId;
     private String userName;
     private String sort;
     private String cont;
+=======
+    private Integer userId;
+    private String sort;
+    private String count;
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     private String replication;
 
     public Integer getId() {
@@ -27,6 +33,7 @@ public class Assess {
         this.goodId = goodId;
     }
 
+<<<<<<< HEAD
     public String getGoodName() {
         return goodName;
     }
@@ -35,6 +42,8 @@ public class Assess {
         this.goodName = goodName;
     }
 
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     public Integer getUserId() {
         return userId;
     }
@@ -43,6 +52,7 @@ public class Assess {
         this.userId = userId;
     }
 
+<<<<<<< HEAD
     public String getUserName() {
         return userName;
     }
@@ -51,6 +61,8 @@ public class Assess {
         this.userName = userName;
     }
 
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     public String getSort() {
         return sort;
     }
@@ -59,12 +71,21 @@ public class Assess {
         this.sort = sort;
     }
 
+<<<<<<< HEAD
     public String getCont() {
         return cont;
     }
 
     public void setCont(String count) {
         this.cont = count;
+=======
+    public String getCount() {
+        return count;
+    }
+
+    public void setCount(String count) {
+        this.count = count;
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     }
 
     public String getReplication() {

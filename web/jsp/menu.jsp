@@ -23,7 +23,11 @@
             padding-top: 100px;
         }
 
+<<<<<<< HEAD
         .caiDan div {
+=======
+        .caidan div {
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
             font-size: 15px;
             margin-top: 20px;
             color: #aab1b7;
@@ -31,7 +35,11 @@
             padding-left: 20px;
         }
 
+<<<<<<< HEAD
         .caiDan div a {
+=======
+        .caidan div a {
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
             font-size: 15px;
             color: #aab1b7;
             cursor: pointer;
@@ -43,7 +51,11 @@
             height: 25px;
         }
 
+<<<<<<< HEAD
         .caiDan div:nth-child(1) {
+=======
+        .caidan div:nth-child(1) {
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
             color: #828e9a;
             font-weight: bold;
         }
@@ -51,6 +63,7 @@
 </head>
 <body>
 <div class="menu">
+<<<<<<< HEAD
     <div style=" padding-left: 20px;"><h3>${admin.username}</h3>
         <h4>欢迎您！</h4></div>
     <div class="caiDan">
@@ -84,6 +97,52 @@
         <div>
             <img src="${pageContext.request.contextPath}/images/assess.png"/> <a
                 href="${pageContext.request.contextPath}/assessListServlet">评价管理</a>
+=======
+    <div>${admin.username}</div>
+    <hr>
+    <div class="caidan">
+        <div>分销管理</div>
+        <div>
+<<<<<<< HEAD
+            <img src="${pageContext.request.contextPath}/images/goods.png"/> <a href="${pageContext.request.contextPath}/goodListServlet">商品管理</a>
+        </div>
+        <div>
+            <img src="${pageContext.request.contextPath}/images/order.png"/> <a href="${pageContext.request.contextPath}/orderListServlet">订单管理</a>
+=======
+            <img src="images/goods.png"/> <a href="${pageContext.request.contextPath}/goodListServlet">商品管理</a>
+        </div>
+        <div>
+            <img src="images/order.png"/> <a href="${pageContext.request.contextPath}/orderListServlet">订单管理</a>
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
+        </div>
+    </div>
+    <div class="caidan">
+        <div>信息管理</div>
+        <div>
+<<<<<<< HEAD
+            <img src="${pageContext.request.contextPath}/images/comm.png"/> <a href="${pageContext.request.contextPath}/communityListServlet">社区管理</a>
+        </div>
+        <div>
+            <img src="${pageContext.request.contextPath}/images/store.png"/> <a href="${pageContext.request.contextPath}/storeListServlet">商家管理</a>
+        </div>
+        <div>
+            <img src="${pageContext.request.contextPath}/images/user.png"/> <a href="${pageContext.request.contextPath}/userListServlet">用户管理</a>
+        </div>
+        <div>
+            <img src="${pageContext.request.contextPath}/images/assess.png"/> <a href="${pageContext.request.contextPath}/assessListServlet">评价管理</a>
+=======
+            <img src="images/comm.png"/> <a href="${pageContext.request.contextPath}/communityListServlet">社区管理</a>
+        </div>
+        <div>
+            <img src="images/store.png"/> <a href="${pageContext.request.contextPath}/storesListServlet">商家管理</a>
+        </div>
+        <div>
+            <img src="images/admin.png"/> <a href="${pageContext.request.contextPath}/userListServlet">用户管理</a>
+        </div>
+        <div>
+            <img src="images/assess.png"/> <a href="${pageContext.request.contextPath}/assessListServlet">评价管理</a>
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
         </div>
     </div>
 </div>

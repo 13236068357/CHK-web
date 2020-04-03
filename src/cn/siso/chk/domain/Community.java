@@ -7,7 +7,10 @@ public class Community {
     private String images;
     private String address;
     private Integer phone;
+<<<<<<< HEAD
     private String username;
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 
     public Integer getId() {
         return id;
@@ -57,4 +60,8 @@ public class Community {
         this.username = username;
     }
 
+<<<<<<< HEAD
+=======
+    private String username;
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 }

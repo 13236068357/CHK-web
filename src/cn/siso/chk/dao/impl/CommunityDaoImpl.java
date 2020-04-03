@@ -7,7 +7,10 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
+<<<<<<< HEAD
 import java.util.Map;
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 
 public class CommunityDaoImpl implements CommunityDao {
 
@@ -15,6 +18,7 @@ public class CommunityDaoImpl implements CommunityDao {
 
     @Override
     public List<Community> findAll() {
+<<<<<<< HEAD
         String sql = "select * from communities";
         List<Community> communities = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Community>(Community.class));
         return communities;
@@ -38,4 +42,14 @@ public class CommunityDaoImpl implements CommunityDao {
         String sql = "delete from communities where id =?";
         jdbcTemplate.update(sql, id);
     }
+=======
+<<<<<<< HEAD
+        String sql = "select * from communities";
+=======
+        String sql = "select * from community";
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
+        List<Community> communities = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Community>(Community.class));
+        return communities;
+    }
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 }

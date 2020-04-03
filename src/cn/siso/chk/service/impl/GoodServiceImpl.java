@@ -2,7 +2,10 @@ package cn.siso.chk.service.impl;
 
 import cn.siso.chk.dao.GoodDao;
 import cn.siso.chk.dao.impl.GoodDaoImpl;
+<<<<<<< HEAD
 import cn.siso.chk.domain.Admin;
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 import cn.siso.chk.domain.Good;
 import cn.siso.chk.service.GoodService;
 
@@ -18,8 +21,13 @@ public class GoodServiceImpl implements GoodService {
         return goodDao.findAll();
     }
 
+<<<<<<< HEAD
     public void addGood(Good good, String userId) {
         goodDao.addGood(good,userId);
+=======
+    public void addGood(Good good) {
+        goodDao.addGood(good);
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     }
 
     @Override

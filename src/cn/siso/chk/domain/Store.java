@@ -4,7 +4,10 @@ public class Store {
 
     private Integer id;
     private String name;
+<<<<<<< HEAD
     private String images;
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     private String info;
     private String address;
     private Integer phone;
@@ -25,6 +28,7 @@ public class Store {
         this.name = name;
     }
 
+<<<<<<< HEAD
     public String getImages() {
         return images;
     }
@@ -33,6 +37,8 @@ public class Store {
         this.images = images;
     }
 
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     public String getInfo() {
         return info;
     }

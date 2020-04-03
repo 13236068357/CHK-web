@@ -25,6 +25,7 @@ body {
 }
 
 .add {
+<<<<<<< HEAD
     font-size: 20px;
     width: 100px;
     height: 35px;
@@ -42,6 +43,13 @@ body {
     margin-right: 40px;
     border: 0;
     background-color: cornflowerblue;
+=======
+    font-size: 24px;
+    width: 150px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: green;
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 }
 
 hr {
@@ -63,11 +71,30 @@ hr {
     color: #111;
 }
 
+<<<<<<< HEAD
+=======
+.excel_head {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e3e8ee;
+    padding: 0 35px 0 15px;
+}
+
+.excel_head div {
+    width: 20%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 .excel table tr:nth-child(1) {
     background-color: #e3e8ee;
 }
 
 .excel table {
+<<<<<<< HEAD
     width: 98%;
     margin: 15px;
     border-collapse: collapse; /*合并边框*/
@@ -75,6 +102,14 @@ hr {
 
 .excel table, td {
     border: 1px dotted #111111;
+=======
+    width: 99%;
+    margin: 10px;
+}
+
+.excel table, th, td {
+    border: 1px solid #111;
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 }
 
 .excel td {
@@ -86,6 +121,10 @@ button {
     height: 28px;
     font-size: 12px;
     border: 0;
+<<<<<<< HEAD
     border-radius: 5px;
+=======
+    border-radius: 2px;
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     color: #fff;
 }

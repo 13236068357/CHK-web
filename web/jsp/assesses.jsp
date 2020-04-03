@@ -7,7 +7,20 @@
 <head>
     <meta charset="UTF-8">
     <link href="${pageContext.request.contextPath}/css/public.css" type="text/css" rel="stylesheet"/>
+<<<<<<< HEAD
     <title>订单管理</title>
+=======
+    <style>
+        .assess {
+            width: 33%;
+            height: 200px;
+            margin: 25px 0 25px 25px;
+            width: 33%;
+        }
+    </style>
+    <title>订单管理</title>
+    <script src="../javaScript/animation.js" charset="utf-8"></script>
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
 </head>
 
 <body>
@@ -23,6 +36,7 @@
 <div class="excel" style="height: 95%; overflow: scroll;">
     <table>
         <tr>
+<<<<<<< HEAD
             <th style="width: 10%">商品名称</th>
             <th style="width: 10%">用户昵称</th>
             <th style="width: 10%">类型</th>
@@ -39,6 +53,28 @@
                     <button style="background-color: cornflowerblue;"
                             onclick="window.location.href='${pageContext.request.contextPath}/?id=${assess.id}'">
                         回复
+=======
+            <th>编号</th>
+            <th>商品名称</th>
+            <th>用户昵称</th>
+            <th>类型</th>
+            <th>操作</th>
+        </tr>
+        <c:forEach items="${assesses}" var="assess" varStatus="s">
+            <tr>
+                <td>${assess.id}</td>
+                <td>${assess.goodId}</td>
+                <td>${assess.userId}</td>
+                <td>${assess.sort}</td>
+                <td>
+                    <button style="background-color: green;"
+                            onclick="window.location.href='${pageContext.request.contextPath}/?id=${assess.id}'">
+                        编辑
+                    </button>
+                    <button style="background-color: red;"
+                            onclick="window.location.href='${pageContext.request.contextPath}/?id=${assess.id}'">
+                        删除
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
                     </button>
                 </td>
             </tr>

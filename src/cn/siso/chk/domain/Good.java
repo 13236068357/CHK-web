@@ -6,7 +6,10 @@ public class Good {
     private String images;
     private Double price;
     private String sort;
+<<<<<<< HEAD
     private String sortChild;
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     private String info;
     private String user_id;
 
@@ -50,6 +53,7 @@ public class Good {
         this.sort = sort;
     }
 
+<<<<<<< HEAD
     public String getSortChild() {
         return sortChild;
     }
@@ -58,6 +62,8 @@ public class Good {
         this.sortChild = sortChild;
     }
 
+=======
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     public String getInfo() {
         return info;
     }

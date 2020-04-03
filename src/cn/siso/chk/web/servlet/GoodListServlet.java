@@ -19,8 +19,19 @@ public class GoodListServlet extends HttpServlet {
         GoodService goodService = new GoodServiceImpl();
         List<Good> goods = goodService.findAll();
         request.setAttribute("goods", goods);
+<<<<<<< HEAD
         //转发
         request.getRequestDispatcher("/jsp/goods.jsp").forward(request, response);
+=======
+<<<<<<< HEAD
+        //转发
+        request.getRequestDispatcher("/jsp/goods.jsp").forward(request, response);
+=======
+
+        //转发
+        request.getRequestDispatcher("jsp/goods.jsp").forward(request, response);
+>>>>>>> 2badce7968e9096ccd3afadadbcc702d1af92b3a
+>>>>>>> 675324a76923d1f881d53eab0c813fa21166c87a
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
