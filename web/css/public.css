@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.head {
+    position: fixed; /*固定在顶部*/
+    left: 200px; /*离左的距离为0*/
+    top: 0; /*离顶部距离为0*/
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    height: 120px;
+}
+
+.belong {
+    font-size: 24px;
+    width: 300px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.add {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 7px 12px 7px 12px;
+    float: right;
+    margin-right: 15px;
+    border: 0;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #2471A3;
+}
+
+.delete {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 7px 12px 7px 12px;
+    float: right;
+    margin-right: 40px;
+    border: 0;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #2471A3;
+}
+
+.add:hover {
+    background-color: #154360;
+}
+
+.delete:hover {
+    background-color: #154360;
+}
+
+hr {
+    position: fixed; /*固定在顶部*/
+    left: 200px; /*离左的距离为0*/
+    top: 130px; /*离顶部距离为0*/
+    bottom: 0;
+    right: 0;
+    height: 3px;
+    background-color: #111;
+}
+
+.excel {
+    position: fixed; /*固定在顶部*/
+    left: 200px; /*离左的距离为0*/
+    top: 150px; /*离顶部距离为0*/
+    bottom: 0;
+    right: 0;
+    color: #111;
+}
+
+.excel table tr:nth-child(1) {
+    background-color: #e3e8ee;
+}
+
+.excel table {
+    width: 98%;
+    margin: 15px;
+    border-collapse: collapse; /*合并边框*/
+}
+
+.excel table, td {
+    border: 1px dotted #111111;
+    text-align: center;
+}
+
+.excel th, td {
+    font-size: 18px;
+    padding: 10px 0 10px 0;
+}
+
+.excel td a {
+    text-decoration: none;
+    border: 1px solid #828e9a;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #111111;
+    padding: 7px;
+}
+
+.excel td a:hover {
+    background-color: #aab1b7;
+}
